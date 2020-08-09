@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Balance-Board-Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="grid-container">
+    <header class="header">
+        <div class="brand">
+            <button onclick="openMenu()">&#9776;</button>
+            <a href="index.html">Balance-Board-Shop</a>
+            <img src="images/brand.svg" alt="logo" />
+        </div>
+        <div class="header-links">
+            <a href="cart.html">Cart</a>
+            <a href="signin.html">Sign In</a>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <h3>Balance Board Categories</h3>
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+            <li><a href="index.html">Original</a></li>
+            <li><a href="index.html">Short</a></li>
+            <li><a href="index.html">Legendary</a></li>
+        </ul>
+    </aside>
+    <main class="main">
+        <div class="content">
+            <ul class="products">
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="images/d1.png" alt="product" />
+                        <div class="product-name">
+                            <a href="product.html">Balance board Original</a>
+                        </div>
+                        <div class="product-brand">Original</div>
+                        <div class="product-price">1700р.</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="images/d1.png" alt="product" />
+                        <div class="product-name">
+                            <a href="product.html">Balance board Original</a>
+                        </div>
+                        <div class="product-brand">Original</div>
+                        <div class="product-price">1700р.</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="images/d1.png" alt="product" />
+                        <div class="product-name">
+                            <a href="product.html">Balance board Original</a>
+                        </div>
+                        <div class="product-brand">Original</div>
+                        <div class="product-price">1700р.</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="images/d1.png" alt="product" />
+                        <div class="product-name">
+                            <a href="product.html">Balance board Original</a>
+                        </div>
+                        <div class="product-brand">Original</div>
+                        <div class="product-price">1700р.</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="images/d1.png" alt="product" />
+                        <div class="product-name">
+                            <a href="product.html">Balance board Original</a>
+                        </div>
+                        <div class="product-brand">Original</div>
+                        <div class="product-price">1700р.</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+    <footer class="footer">
+        All right reserved.
+    </footer>
+</div>
+<script>
+    function openMenu() {
+        document.querySelector(".sidebar").classList.add("open");
+    }
+    function closeMenu() {
+        document.querySelector(".sidebar").classList.remove("open");
+    }
+</script>
+</body>
+</html>

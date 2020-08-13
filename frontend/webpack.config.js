@@ -2,6 +2,19 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    devServer: {
+        historyApiFallback: true,
+        host: 'localhost',
+        port: 3000,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000/',
+                secure: false,
+                changeOrigin: true
+            }
+        },
+    },
+
     entry: {
         index: [
             // 'babel-polyfill',

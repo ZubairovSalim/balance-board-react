@@ -7,7 +7,8 @@ export default {
             price: 1700,
             brand: 'Original',
             rating: 4.5,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 6
         },
         {
             id: 2,
@@ -16,7 +17,8 @@ export default {
             price: 2400,
             brand: 'Original',
             rating: 4.2,
-            numReviews: 1
+            numReviews: 1,
+            countInStock: 2
         },
         {
             id: 3,
@@ -25,7 +27,8 @@ export default {
             price: 2400,
             brand: 'Original',
             rating: 4.4,
-            numReviews: 2
+            numReviews: 2,
+            countInStock: 0
         },
         {
             id: 4,
@@ -34,7 +37,9 @@ export default {
             price: 2400,
             brand: 'Original',
             rating: 4.8,
-            numReviews: 7
+            numReviews: 7,
+            countInStock: 5
+
         },
         {
             id: 5,
@@ -43,7 +48,8 @@ export default {
             price: 2400,
             brand: 'Original',
             rating: 4.6,
-            numReviews: 4
+            numReviews: 4,
+            countInStock: 3
         }
     ]
 }

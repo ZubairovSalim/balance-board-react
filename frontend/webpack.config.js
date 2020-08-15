@@ -8,7 +8,7 @@ module.exports = {
         port: 3000,
         proxy: {
             '/api': {
-                target: 'http://localhost:5000/',
+                target: 'http://localhost:5000',
                 secure: false,
                 changeOrigin: true
             }
@@ -24,6 +24,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: "index.js",
+        publicPath: '/'
     },
     target: 'web',
     // plugins: [

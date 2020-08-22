@@ -1,3 +1,5 @@
+import Product from "./models/productModel";
+
 const path = require('path')
 import express from 'express';
 import data from "./data";
@@ -6,6 +8,8 @@ import config from "./config";
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
+import productRoute from './routes/productRoute';
+import router from "./routes/productRoute";
 
 dotenv.config();
 
@@ -22,10 +26,11 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
+app.use("/api/products", productRoute);
 
-app.get("/api/products/:id", (req, res) => {
+app.get("/api/product/:id", async (req, res) => {
     const productId = req.params.id;
-    const product = data.products.find(x => x.id === +productId);
+    const product = await Product.findById(productId);
 
     product ? res.send(product) : res.status(404).send({msg: "Product Not Found."});
 

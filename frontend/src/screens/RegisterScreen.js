@@ -12,11 +12,13 @@ function RegisterScreen(props) {
     const userRegister = useSelector(state => state.userRegister);
     const {loading, userInfo, error} = userRegister;
 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
     const dispatch = useDispatch();
 
     useEffect(() => {
         if (userInfo) {
-            props.history.push("/");
+            props.history.push(redirect);
         }
     }, [userInfo]);
 
@@ -38,7 +40,7 @@ function RegisterScreen(props) {
                     </li>
                     <li>
                         <label htmlFor="name">Name</label>
-                        <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                        <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
                     </li>
                     <li>
                         <label htmlFor="email">Email</label>
@@ -56,7 +58,7 @@ function RegisterScreen(props) {
                         <button type="submit" className="button primary">Register</button>
                     </li>
                     <li>
-                        Already have an account? <Link to="/signin">Sign-In</Link>
+                        Already have an account? <Link to={redirect === '/' ? 'signin' : `signin?redirect=${redirect}` } className="button secondary text-center">Sign in your Balance-Board-Shop account</Link>
                     </li>
                 </ul>
             </form>

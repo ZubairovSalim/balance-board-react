@@ -10,11 +10,13 @@ function SigninScreen(props) {
     const userSignin = useSelector(state => state.userSignin);
     const {loading, userInfo, error} = userSignin;
 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
     const dispatch = useDispatch();
 
     useEffect(() => {
         if (userInfo) {
-            props.history.push("/");
+            props.history.push(redirect);
         }
     }, [userInfo]);
 
@@ -49,7 +51,7 @@ function SigninScreen(props) {
                         New to Balance-Board-Shop?
                     </li>
                     <li>
-                        <Link to="/register" className="button secondary text-center">Create your Balance-Board-Shop account</Link>
+                        <Link to={redirect === '/' ? 'register' : `register?redirect=${redirect}` } className="button secondary text-center">Create your Balance-Board-Shop account</Link>
                     </li>
                 </ul>
             </form>

@@ -12,7 +12,7 @@ router.post('/signin', async (req, res) => {
 
     if (signinUser) {
         res.send({
-            id: signinUser.id,
+            _id: signinUser.id,
             name: signinUser.name,
             email: signinUser.email,
             isAdmin: signinUser.isAdmin,
@@ -33,7 +33,7 @@ router.post('/register', async (req, res) => {
 
     if (newUser) {
         res.send({
-            id: newUser.id,
+            _id: newUser.id,
             name: newUser.name,
             email: newUser.email,
             isAdmin: newUser.isAdmin,

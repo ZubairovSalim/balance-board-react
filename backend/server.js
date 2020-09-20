@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
-import router from "./routes/productRoute";
+import orderRoute from "./routes/orderRoute";
 
 dotenv.config();
 
@@ -27,6 +27,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
+app.use("/api/orders", orderRoute);
 
 app.get("/api/product/:id", async (req, res) => {
     const productId = req.params.id;
